@@ -1,0 +1,16 @@
+version: 1
+data_sources:
+  - id: my-data
+    type: json
+    path: https://raw.githubusercontent.com/javierquintanaf/CLOAKSDATA/nakamigos-CLOAKS_Metadata.json
+dashboards:
+  - id: CLOAKS
+    title: CLOAKS
+    layout:
+      - type: chart
+        title: My Chart
+        source: my-data
+        data:
+          type: bar
+          x: field1
+          y: field2
